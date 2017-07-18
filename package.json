@@ -1,0 +1,27 @@
+{
+  "name": "cli-cli",
+  "version": "0.1.1",
+  "description": "Cli tool to create other cli tools using @szpadel/core-cli",
+  "bin": {
+    "cli-cli": "dist/cli.js"
+  },
+  "author": "Piotr Rogowski <piotrekrogowski@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && cp -r src dist && tsc",
+    "start": "ts-node src/cli.ts",
+    "prepublish": "yarn run build"
+  },
+  "devDependencies": {
+    "@types/jasmine": "^2.5.53",
+    "@types/node": "^8.0.13",
+    "ts-node": "^3.2.0",
+    "yarn": "^0.27.5"
+  },
+  "dependencies": {
+    "@types/chalk": "^0.4.31",
+    "chalk": "^2.0.1",
+    "clicore": "https://github.com/szpadel/clicore#master",
+    "typescript": "~2.3.1"
+  }
+}

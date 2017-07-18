@@ -1,0 +1,13 @@
+import {CliBootstrapper} from 'clicore'
+import * as path from "path";
+
+const packageJson = require('../package.json');
+const cli = new CliBootstrapper({
+    configFilename: '__config_file_name__',
+    pkgName: packageJson.name,
+    cliDescription: packageJson.description,
+    cliVersion: packageJson.version,
+    blueprintLocation: path.join(__dirname, 'blueprints'),
+    cliBin: '__bin_name__'
+});
+cli.runCli(process.argv);

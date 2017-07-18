@@ -174,9 +174,9 @@ camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
-"caporal@https://github.com/Szpadel/Caporal.js#master":
+"caporal@git+https://github.com/Szpadel/Caporal.js.git#master":
   version "0.7.0"
-  resolved "https://github.com/Szpadel/Caporal.js#c9bf27064af8b5ec233706f6039c7cf6e60ba421"
+  resolved "git+https://github.com/Szpadel/Caporal.js.git#c9bf27064af8b5ec233706f6039c7cf6e60ba421"
   dependencies:
     bluebird "^3.4.7"
     chalk "^1.1.3"
@@ -243,9 +243,9 @@ cli-width@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
 
-"clicore@https://github.com/szpadel/clicore#master":
-  version "0.1.0"
-  resolved "https://github.com/szpadel/clicore#22a5efc49aa25c867e34f8119a2e85d64aaba886"
+clicore@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/clicore/-/clicore-0.1.3.tgz#a82ccf717c50e5c877d50838d3afa0811622c6ab"
   dependencies:
     camelcase "^4.1.0"
     caporal "https://github.com/Szpadel/Caporal.js#master"

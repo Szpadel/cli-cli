@@ -24,6 +24,18 @@ Follow wizard
 
 Done!
 
+# Creating new blueprint
+
+Use cli:
+```
+npm run cli-cli
+```
+
+Follow wizard
+![new blueprint](https://rawgit.com/Szpadel/cli-cli/master/images/new-blueprint.png)
+
+Work on generated files.
+
 # Current features
  * Create new blueprint
  * Create new cli project

@@ -18,11 +18,11 @@
     "@types/jasmine": "^2.5.53",
     "@types/node": "^8.0.13",
     "ts-node": "^3.2.0",
-    "cli-cli": "^0.1.0",
+    "cli-cli": "^0.2.0",
     "yarn": "^0.27.5"
   },
   "dependencies": {
     "typescript": "~2.3.1",
-    "clicore": "https://github.com/szpadel/clicore#master"
+    "clicore": "^0.1.5"
   }
 }

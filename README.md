@@ -38,4 +38,5 @@ Work on generated files.
 
 # Current features
  * Create new blueprint
+ * Create new blueprint basing on existing files
  * Create new cli project

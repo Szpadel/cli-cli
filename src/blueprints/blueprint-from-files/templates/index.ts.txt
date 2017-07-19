@@ -1,0 +1,37 @@
+import {Blueprint, BlueprintParameter, Change} from "clicore";
+import * as path from "path";
+
+interface TemplateParams {
+    [k: string]: string;
+    __example_placeholder__: string;
+}
+
+const filesMap: [string, string][] = [
+__files_map__
+];
+
+export default //noinspection JSUnusedGlobalSymbols
+class NewProjectBlueprint extends Blueprint {
+    name = '__name__';
+    description = '__description__';
+    options: BlueprintParameter[] = [
+        {name: 'example', type: 'string', description: 'This is example parameter', require: true, ask: true},
+    ];
+
+    private templateParams: TemplateParams;
+
+    prepare(options: {
+        [k: string]: string | boolean;
+    }): void {
+        this.templateParams = {
+            __example_placeholder__: options['example'] as string,
+        }
+    }
+
+    generateChanges(): Change[] {
+        return [
+            ...this.createFilesFromTemplates(path.join(__dirname, 'templates'), filesMap, this.templateParams)
+        ];
+    }
+
+}

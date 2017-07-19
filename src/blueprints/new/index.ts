@@ -60,6 +60,8 @@ class NewProjectBlueprint extends Blueprint {
     }
 
     async postApply() {
+        console.log(Chalk.green('Initializing git repository...'));
+        await this.executeCommand(this.templateParams.__name__, 'git init');
         console.log(Chalk.green('Installing node packages for you... this may take a while'));
         await this.executeCommand(this.templateParams.__name__, 'yarn || npm i');
     }

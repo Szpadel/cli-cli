@@ -1,4 +1,4 @@
-import {Blueprint, BlueprintParameter, Change, InsertChange} from "clicore";
+import {Blueprint, BlueprintParameter, Change, InsertChange, ValidationError} from "clicore";
 import * as path from "path";
 import * as fs from 'fs-extra';
 import {FileGenerator} from "clicore/dist/file-generator";
@@ -59,6 +59,11 @@ class NewProjectBlueprint extends Blueprint {
         entities
             .filter((f) => fs.statSync(f).isDirectory())
             .forEach((d) => this.walkDir(d, cb));
+    }
+
+    precondition(): Promise<boolean> {
+        // file must exist
+        return new Promise((r) => fs.exists('src/cli.ts', r));
     }
 
     prepare(options: {

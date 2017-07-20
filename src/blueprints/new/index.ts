@@ -1,6 +1,7 @@
 import {Blueprint, BlueprintParameter, Change} from "clicore";
 import * as path from "path";
 import * as Chalk from "chalk";
+import * as fs from "fs-extra";
 
 interface TemplateParams {
     [k: string]: string;
@@ -37,6 +38,12 @@ class NewProjectBlueprint extends Blueprint {
     ];
 
     private templateParams: TemplateParams;
+
+    precondition(): Promise<boolean> {
+        // file cannot exist
+        return new Promise((r) => fs.exists('src/cli.ts', r))
+            .then(e => !e);
+    }
 
     prepare(options: {
         [k: string]: string | boolean;

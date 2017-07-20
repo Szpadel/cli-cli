@@ -2,6 +2,7 @@
   "name": "cli-cli",
   "version": "0.2.3",
   "description": "Cli tool to create other cli tools using @szpadel/core-cli",
+  "repository": "https://github.com/Szpadel/cli-cli",
   "bin": {
     "cli-cli": "dist/cli.js"
   },
@@ -22,7 +23,7 @@
     "@types/chalk": "^0.4.31",
     "@types/fs-extra": "^3.0.3",
     "chalk": "^2.0.1",
-    "clicore": "^0.1.5",
+    "clicore": "https://github.com/Szpadel/clicore#master",
     "fs-extra": "^4.0.0",
     "typescript": "~2.3.1"
   }

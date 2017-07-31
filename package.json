@@ -9,7 +9,7 @@
   "author": "Piotr Rogowski <piotrekrogowski@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && cp -r src dist && tsc",
+    "build": "rm -rf dist && cp -r src dist && tsc && chmod +x dist/cli.js",
     "start": "ts-node src/cli.ts",
     "prepublish": "yarn run build"
   },

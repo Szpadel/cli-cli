@@ -14,7 +14,7 @@ interface TemplateParams {
 
 const filesMap: [string, string][] = [
     ['cli.ts.txt', '__name__/src/cli.ts'],
-    ['gitignore.txt', '__name__/.gitignore.ts'],
+    ['gitignore.txt', '__name__/.gitignore'],
     ['package.json.txt', '__name__/package.json'],
     ['tsconfig.json.txt', '__name__/tsconfig.json']
 ];

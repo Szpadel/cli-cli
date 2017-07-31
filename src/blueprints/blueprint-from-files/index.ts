@@ -16,14 +16,14 @@ const filesMap: [string, string][] = [
 
 export default //noinspection JSUnusedGlobalSymbols
 class NewProjectBlueprint extends Blueprint {
-    name = 'blueprint-from-file';
+    name = 'blueprint-from-files';
     description = 'Create new blueprint basing on existing files';
     options: BlueprintParameter[] = [
         {name: 'name', type: 'string', description: 'Blueprint name', require: true, ask: true},
         {name: 'description', type: 'string', description: 'Blueprint description', require: true, ask: true},
         {
             name: 'path',
-            type: 'string',
+            type: 'dir',
             description: 'Path to directory with files on with blueprint should be based',
             require: true,
             ask: true
